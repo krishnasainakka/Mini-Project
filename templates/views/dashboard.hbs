@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge">
+	<meta name="viewport"content="width=device-width,initial-scale=1.0">
+	<title>Dash Board</title>
+	<link rel="stylesheet" href="css/dashboard.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<style>
+        .article {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .article-title {
+        width: 15%;
+        }
+
+        .article-tvchannel {
+        width: 10%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+	<!-- for header part -->
+	<header>
+		{{>navbar}}
+
+	</header>
+
+	<div class="main-container">
+		
+		{{>container}}
+
+			<div class="report-container">
+				<div class="report-header">
+					<h1 class="recent-Articles">Recent Articles</h1>
+					<form action="/dashboard" method="GET">
+						<label for="filterDate">Filter by Date:</label>
+						<input type="date" id="filterDate" name="filterDate">
+						<button type="submit">Filter</button>
+					</form>
+				</div>
+
+
+				<div class="report-body">
+					<div class="report-topic-heading">
+						<h3 class="t-op">Article</h3>
+						<h3 class="t-op">Title</h3>
+						<h3 class="t-op">View</h3>
+						<h3 class="t-op">Status</h3>
+					</div>
+                    
+					{{#each articles}}
+					<div class="article">
+						<div class="article-tvchannel">
+                            <h2><span class="title-heading"></span> {{id}}</h2>
+                        </div>
+						<div class="article-title">
+                            <h2><span class="title-heading"></span> {{title}}</h2>
+                        </div>
+                        
+                        <div class="article-view">
+                            <h2><span class="title-heading"></span>
+                            {{#if url}}
+                            <a href="{{url}}">view Article</a>
+                            {{/if}}
+                            </h2>
+                        </div>
+						<div>
+							{{#if published}}
+							<h2>Published</h2>
+							{{else}}
+							<h2>Not Published</h2>
+							{{/if}}
+						</div>
+                        
+					</div>
+                    <hr>
+					{{/each}}
+                    
+
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

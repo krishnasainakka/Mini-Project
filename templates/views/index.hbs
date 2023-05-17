@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    
+    <div class="footmarquee" style="font-size: 13px;">
+      <marquee behavior="alternate" direction="left">
+          <b id="heading">DECENTRALIZED NEWS ARTICLE PUBLISHER </b>
+        </marquee>
+  </div>
+
+    <section id="login">
+        <div class="forms">
+          <div class="form-wrapper is-active">
+            <button type="button" class="switcher switcher-login">
+              User Login
+              <span class="underline"></span>
+            </button>
+            <form class="form form-login" action="/index" method="POST">
+              <fieldset>
+                <legend>Please, enter your email and password for login.</legend>
+                
+                <div class="input-block">
+                  <label for="loginemail">E-mail</label>
+                  <input id="loginemail" name="loginemail" type="email" required>
+                </div>
+                <div class="input-block">
+                  <label for="loginpassword">Password</label>
+                  <input id="loginpassword" name="loginpassword" type="password" required>
+                </div>
+
+              </fieldset>
+              <button type="submit" class="btn-login" value="Login">Login</button>
+            </form>
+          </div>
+
+          <div class="form-wrapper">
+            <button type="button" class="switcher switcher-signup">
+              NewsChannel Login
+              <span class="underline"></span>
+            </button>
+            <form class="form form-signup" action="/newsindex" method="POST">
+              <fieldset>
+                <legend>Please, enter your email, password and password confirmation for sign up.</legend>
+                <div class="input-block">
+                  <label for="newsloginemail">E-mail</label>
+                  <input id="newsloginemail" type="email" name="newsloginemail" required>
+                </div>
+                <div class="input-block">
+                  <label for="newsloginpassword">Password</label>
+                  <input id="newsloginpassword" type="password" name="newsloginpassword" required>
+                </div>
+                <div class="input-block">
+                  <label for="tvchannel">Tv Channel</label>
+                  <input id="tvchannel" type="text"  name="tvchannel" required>
+                </div>
+              </fieldset>
+              <button type="submit" class="btn-signup" value="newslogin" >Login</button>
+            </form>
+          </div>
+        </div>
+        <div class="acc">
+          <p>Dont have an Account <a href="/signup">Signup</a></p>
+        </div>
+      </section>
+
+      <script>
+        const switchers = [...document.querySelectorAll('.switcher')]
+
+        switchers.forEach(item => {
+            item.addEventListener('click', function() {
+                switchers.forEach(item => item.parentElement.classList.remove('is-active'))
+                this.parentElement.classList.add('is-active')
+            })
+        })
+      </script>
+</body>
+</html>

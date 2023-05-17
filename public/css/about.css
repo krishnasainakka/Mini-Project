@@ -1,0 +1,72 @@
+body{
+    background-image: url(globe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    background-color: black;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    font-size:20px;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.active{
+    background-color: gray;
+    color: white;
+}
+
+li a:hover {
+    background-color: orange;
+    color: white;
+}
+
+#heading{
+    font-size: 33px;
+    color: #a7e245;
+    font-style: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 45px;
+    color: #a7e245;
+    font-style: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+li{
+    color: magenta;
+    font-size: 20px;
+}
+
+#content{
+    background-color: black;
+    width:75vw;
+    border: 5px solid red;
+    border-radius: 2%;
+    position: absolute;
+    left: 150px;
+    padding: 10px;
+    opacity:70%;
+}
+
+#one{
+    list-style-type: circle;
+    color: white;
+}

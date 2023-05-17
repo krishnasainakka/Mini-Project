@@ -1,0 +1,133 @@
+body{
+  /* https://static.vecteezy.com/system/resources/thumbnails/001/625/621/original/world-news-background-concept-free-video.jpg */
+  background-image: url(https://png.pngtree.com/background/20220724/original/pngtree-breaking-news-template-live-background-picture-image_1738696.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  /* background-position: center center; */
+  /* background-color: #232323; */
+}
+
+/* NAV-BAR */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  /* overflow: hidden; */
+  background-color: black;
+  /* opacity:80%; */
+  position: absolute;
+  left:400px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+ font-size:20px;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+li a button{
+  float: right;
+  position: relative;
+  right:-400px;
+  text-emphasis-style: bolder;
+  background-color: aqua;
+}
+
+.active{
+background-color: gray;
+color: white;
+}
+li a:hover {
+  background-color: orange;
+  color: white;
+}
+
+
+/* NEWS CHANNEL */
+#news-channels{
+  width: 26.5vw;
+  height: 65vh;
+  background-color: rgb(86, 224, 224);
+  float: left;
+  position:absolute;
+  top:26vh;
+  left:25px;
+  margin-top: 20px;
+  overflow: auto;
+  border-radius: 3%;
+}
+
+.newschannel {
+  border: 2px solid yellowgreen;
+  padding: 2px;
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: space-between;
+  color:black;
+  border-radius: 3%;
+}
+
+
+  .news-channel {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .news-channel-header {
+    flex-basis: 80%;
+  }
+
+  .news-channel-body {
+    flex-basis: 20%;
+    padding-right:50px;
+    text-align: right;
+  }
+
+  #line{
+    border-width: 2px;
+  }
+
+/* LATEST NEWS */
+
+#articles {
+    width: 65vw;
+    height: 84vh;
+    background-color: rgb(86, 224, 224);
+    margin-top: 20px;
+    overflow: auto;
+    /* border-radius: 3%; */
+    float:right;
+    position:absolute;
+    right:35px;
+    top:10vh;
+    
+}
+.sub-head{
+    color:darkorchid;
+    text-align: center;
+}
+  
+  .article {
+    border: 4px solid yellowgreen;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .article h2 {
+    margin-top: 0;
+  }
+
+  a{
+    text-emphasis-style: bold;
+    color:red;
+  }
+  
+  

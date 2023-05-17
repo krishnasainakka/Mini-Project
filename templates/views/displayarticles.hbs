@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+            color
+        }
+        #head{
+            text-align: center;
+        }
+        .article {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .article-title {
+        width: 30%;
+        }
+
+        .article-tvchannel {
+        width: 20%;
+        }
+
+    </style>
+</head>
+<body>
+        
+
+        <div class="articles">
+                    <h1 id="head">PUBLISHED ARTICLES</h1>
+                    <form action="/displayarticles" method="GET">
+                        <label for="filterDate">Filter by Date:</label>
+                        <input type="date" id="filterDate" name="filterDate">
+                        <button type="submit">Filter</button>
+                    </form>
+                    <hr>
+					{{#each filteredArticles}}
+					<div class="article">
+						<div class="article-title">
+                            <h2><span class="title-heading">Title:</span> {{title}}</h2>
+                        </div>
+                        <div class="article-tvchannel">
+                            <h2><span class="title-heading">tvchannel:</span> {{tvchannel}}</h2>
+                        </div>
+                        <div class="article-view">
+                            <h2><span class="title-heading">view:</span>
+                            {{#if url}}
+                            <a href="{{url}}">view Article</a>
+                            {{/if}}
+                            </h2>
+                        </div>
+                        
+					</div>
+                    <hr>
+					{{/each}}
+		</div>
+        
+    </div>
+
+
+</body>
+</html>

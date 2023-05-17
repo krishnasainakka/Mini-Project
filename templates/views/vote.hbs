@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge">
+	<meta name="viewport"content="width=device-width,initial-scale=1.0">
+	<title>Vote Article</title>
+	<link rel="stylesheet" href="css/vote.css">
+	<link rel="stylesheet" href="css/responsive.css">
+    <style>
+	.title-heading {
+		font-weight: bold;
+		font-size: 20px;
+		margin-right: 10px;
+	}
+	</style>
+</head>
+
+<body>
+
+	<!-- for header part -->
+	<header>
+		{{>navbar}}
+
+	</header>
+
+	<div class="main-container">
+		{{>container}}
+		<div class="main">
+
+			<div class="searchbar2">
+				<input type="text"
+					name=""
+					id=""
+					placeholder="Search">
+				<div class="searchbtn">
+				<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
+						class="icn srchicn"
+						alt="search-button">
+				</div>
+			</div>
+
+
+			<div class="report-container">
+				<div class="report-header">
+					<h1 class="recent-Articles">Vote On Articles</h1>
+				</div>
+                <div class="articles">
+					{{#each articles}}
+						<div class="article">
+						<h2><span class="title-heading">Title:</span> {{title}}</h2>
+						<h2><span class="title-heading">tvchannel:</span> {{tvchannel}}</h2>
+						<h2><span class="title-heading">view:</span>
+							{{#if url}}
+							<a href="{{url}}">view Article</a>
+							{{/if}}
+						</h2>
+						<p>{{upVotes}} upvotes, {{downVotes}} downvotes</p>
+						<form style="display: inline" method="POST" action="/vote/{{_id}}/upvote">
+							<button type="submit">Upvote</button>
+						</form>
+						<form style="display: inline" method="POST" action="/vote/{{_id}}/downvote">
+							<button type="submit">Downvote</button>
+						</form>
+						<hr>
+						</div>
+					{{/each}}
+				</div>
+
+                </div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

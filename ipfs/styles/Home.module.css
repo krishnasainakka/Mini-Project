@@ -1,0 +1,89 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 3rem;
+}
+
+.title {
+  text-align: center;
+}
+
+.connect {
+  margin-bottom: 2rem;
+  width: 230px;
+  position: absolute;
+  right:-15px;
+  top: 20px;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.dropzoneContainer {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.btn {
+  position: absolute;
+  margin: auto;
+  left: 534px;
+  top: 100px;
+  height: 60px;
+  width: 500px;
+  color: darkblue;
+  background-color: aqua;
+  font-size: large;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+
+.uploadedFile {
+  width:800px;
+  height:50px;
+  background-color: antiquewhite;
+  color: blue;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  border-radius: 10px;
+  text-align: center;
+  padding:10px;
+}
+
+.footer {
+  position: relative;
+  top:350px;
+  margin: 0;
+  line-height: 1.15;
+  font-size: 3rem;
+  text-align: center;
+
+}
+
+
+
+
+
+
+
