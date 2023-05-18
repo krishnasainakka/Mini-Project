@@ -14,7 +14,6 @@ This application implements a voting system, allowing users working in different
 4. Now your server is ready.
 5. Open any browser and type localhost:8000
 6. Now you can create Account and publish the articles.
-7. You can also use the login credintials available in credentials file to login.
 
 ## Screenshots
 
