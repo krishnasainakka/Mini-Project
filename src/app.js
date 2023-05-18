@@ -40,17 +40,26 @@ hbs.registerPartials(partials_path);
 
 // Route to render the article page
 app.get('/vote', async (req, res) => {
-    try {
-      const currentChannel = req.session.tvchannel;
+  try {
+    const currentChannel = req.session.tvchannel;
 
-      // Find all articles except those published by the current channel
-      const articles = await Article.find({ tvchannel: { $ne: currentChannel }, published: false  });
-      res.render('vote', { articles });
-    } catch (err) {
-      console.error(err);
-      res.status(500).send('Internal Server Error');
-    }
-  });  
+    const durationInHours = 12; // Specify the duration in hours after which the article should not be displayed
+    const cutoffDate = new Date();
+    cutoffDate.setHours(cutoffDate.getHours() - durationInHours); // Set the cutoff time to the current time minus the duration
+
+    // Find all articles except those published by the current channel and still within the display duration
+    const articles = await Article.find({ 
+      tvchannel: { $ne: currentChannel },
+      published: false, // Only consider published articles
+      publishDate: { $gt: cutoffDate },
+    });
+
+    res.render('vote', { articles });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+  }
+});  
 
 
   app.get('/dashboard', async (req, res) => {
