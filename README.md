@@ -3,14 +3,17 @@
 This project is a decentralized web application designed for publishing and reading news articles. It utilizes a combination of web technologies such as HTML, Handlebars, CSS, JavaScript, TypeScript Node.js, MongoDB, and IPFS database. The main goal of the application is to ensure the delivery of high-quality and accurate news content to users.
 This application implements a voting system, allowing users working in different Newschannels to participate in the evaluation and rating of news articles. This system helps in promoting trustworthy and reliable news sources by considering the feedback and opinions of the this community users.
 
+## Contributor
+1. G.Sathvik
+
 ## Tools-Required
 - Install Visual Studio Code or any other IDE
 - Install MongoDB and IPFS Database
 
 ## How to Run 
 1. Clone this Repository.
-2. Open the terminal and run command npm run dev.
-3. Open another terminal and go to ipfs folder and then again run npm run dev.
+2. Open the terminal and run command - npm run dev.
+3. Open another terminal and go to ipfs folder and then again run -  npm run dev.
 4. Now your server is ready.
 5. Open any browser and type localhost:8000
 6. Now you can create Account and publish the articles.
